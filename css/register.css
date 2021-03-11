@@ -1,0 +1,186 @@
+.container{
+    margin:  0 auto;
+    width: 1000px;   
+}
+.log-cont{
+    padding: 50px 20px; 
+    min-height: 550px;
+}
+
+
+
+.rej-header{
+    height: 100px;
+    
+}
+.rej-log{
+    display: inline;
+    float: left;
+   
+    
+}
+.rej-log a{
+    width: 125px;
+    height: 100px;
+    display: inline-block;
+     background: url(../images/elf.png) no-repeat;
+    background-position: -308px -57px ;
+    text-indent: -9999px;
+}
+.rej-hRight{
+   float: right;
+   width: 304px;
+   height: 100px;
+
+   background-image: url(../images/elf.png);
+   background-position:  0 0;
+
+}
+
+.rej-conntent{
+    background-image: url(../images/banner.jpg)  ;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 650px;
+}
+.rej-login{
+
+    height: 510px;
+    border-radius: 2px;
+    float: right;
+    background-color: #fff;
+}
+.log-tableNav{
+    width: 300px;
+    padding: 0 30px;
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    justify-content: space-between;
+}
+
+
+
+
+.logTabnavle{
+    display: inline-block;
+    
+    vertical-align: top;
+    color: #666;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    cursor: pointer;
+    overflow: hidden;
+   
+}
+
+.logTabnavri{
+    display: inline-block;
+    line-height: 50px;
+   
+}
+.logTabnavri a{
+    color: red;
+}
+.contain{
+    display: none;
+    position: relative;
+    padding-top: 20px;
+    
+}
+.containAccount-login{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+.account{
+    width: 300px;
+    height: 43px;
+    border: 1px solid #b2b2b2;
+    margin-bottom: 19px;
+    margin-top: 30px;
+    line-height: 43px;
+}
+.account input{
+    border: none;
+    display: inline-block;
+    height: 45px;
+    width: 240px;
+    background-color:rgba(128, 79, 0, 0);
+    
+}
+.p{
+    margin-bottom: 5px;  
+    width: 283px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: seashell;
+}
+.password   input{
+    border: none;
+    display: inline-block;
+    height: 45px;
+    background-color:rgba(128, 79, 0, 0);
+    width: 240px;
+}
+.password{
+    width: 300px;
+    height: 43px;
+    border: 1px solid #b2b2b2;
+    margin-bottom: 19px;
+    line-height: 43px;
+}
+.text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19px;
+    
+}
+.xieyi{
+    margin-bottom: 30px;
+}
+
+.button{
+    cursor: pointer;
+    width: 300px;
+    height: 43px;
+    background-color: #f10180;
+    border: 1px solid #f10180;
+    margin-bottom: 19px;
+    font-size :18px; ;
+    color: #fff;
+}
+
+.pw{
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.pwa{
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.pws{
+    text-align: center;
+    color: red;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+
+
+
+.rej-foot{
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-size: 12px;
+}

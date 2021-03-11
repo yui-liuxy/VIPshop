@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+    
+    <div class="rej-header container">
+       <div class="rej-log"><a href="https://www.vip.com/">唯品会</a></div>
+       <div class="rej-hRight"></div>  
+    </div>
+    <div class="rej-conntent ">
+        <div class="container  log-cont">
+         <div class="rej-login  ">
+          <div  class="'log-top">
+           <div class="log-tableNav">
+               <div class="logTabnavle">会员注册</div><div class="logTabnavri">已注册可直接<a href="">登录</a>   
+                </div>
+           </div>
+           <div class="containAccount-login">
+              
+                    <div class="account"><span class="iconfont   icon-yonghu  " style="padding:0 10px;"></span><input type="text" name="userphone" id=""  placeholder="请输入手机号" maxlength=11></div>
+                    <p class="p"> </p>
+                    <div class="password"><span  class="iconfont icon-42"   style="padding:0 10px; font-size: 19px;"></span><input type="password" name="password1" id=""  placeholder="密码由8-20位字母，数字和符号组合" maxlength=20></div>
+                    <p > </p>
+                    <div class="password"><span  class="iconfont icon-42"   style="padding:0 10px; font-size: 19px;"></span><input type="password" name="password2" id=""  placeholder="请再次输入密码" maxlength=20></div>
+                    <p > </p>
+                    <div class="xieyi"><input type="checkbox"> <label for="">我已阅读并接受以下条款：   <a href="">《唯品会服务条款》</a><a href="">《隐私条款》</a> <a href="">《唯品支付用户服务协议》</a> </label></div>  
+                     <input type="submit" name="" id=""  class="button">
+                    
+           </div>
+         </div>
+        </div>
+       
+    </div>
+    <div class="rej-foot">
+        <p>Copyright 2008-2020 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
+    </div> 
+    <script  src="./js/jQuery 3.6.0.js"></script>
+   
+    <script>
+       
+         //手机号
+        
+         if($('[name="userphone"]').val()===''){
+                $('.p').text('请先输入手机号以安全验证')       
+            }
+         $('[name="userphone"]')[0].oninput=function(){
+            var  reg = /^1[35789]\d{9}$/;
+            if(!reg.test($('[name="userphone"]').val())){
+                $('.p').text('请输入正确手机号') 
+            }else{
+                $('.p').remove()
+                return true
+            }
+
+        }
+      
+          //密码框 
+        
+          $('[type="password"]')[0].onblur=function(){   
+         if($('[type="password"]')[0].value === ''){
+             
+          $( $('[type="password"]')[0].parentNode).next().addClass('pw')
+            $('.pw').text('请输入密码')
+        }
+       }
+       $('[type="password"]')[0].oninput=function(){
+            var word_reg = /[a-zA-Z]+/;
+             var number_reg = /\d+/;
+            // console.log($('[type="password"]')[0].value);
+             if(!word_reg.test($('[type="password"]')[0].value) || !number_reg.test($('[type="password"]')[0].value)){
+                
+                $( $('[type="password"]')[0].parentNode).next().addClass('pwa')
+                $('.pwa').text('请输入密码6~16位，由字母、数字组成，必须包含字母和数字')
+              
+              }else{
+                $('.pwa').text('')
+                  $('.pwa').removeClass('pwa')
+              }
+       }
+       //确认密码
+       $('[type="password"]')[1].oninput=function(){
+      if($('[type="password"]')[0].value === ''){
+        $( $('[type="password"]')[1].parentNode).next().addClass('pw')
+              $('.pw').text('请先输入密码')
+              }else  if($('[name="password2"]').val() !== $('[name="password1"]').val()){
+        $( $('[type="password"]')[1].parentNode).next().addClass('pw')
+                $('.pw').text('请输入相同密码')
+        
+    }
+              
+    else{
+        $('.pw').text('')
+        $('.pw').removeClass('pw')
+    }
+}
+
+$p=$(' <span class="pws"> </span>')
+    $('.button').click(function(){
+        var password=$('[type="password"]')[0].value   
+        var userphone=$('[name="userphone"]').val()
+        if( !($(':checkbox').prop('checked'))){
+       
+        $('.button').before($p)
+        $('.pws').text('请同意协议')
+        
+    }else if( ($(':checkbox').prop('checked'))){
+      
+        $('.pws').remove()
+    } 
+   /*  $('[type="submit"]').prop('disabled',true) */
+    $.post({
+        url:'./php/register.php',
+       
+        data:{
+             userphone:userphone,
+             password: password
+        },
+        method:"post",
+        dataType:'json',
+        success:function(respon){
+            console.log(respon);
+            var {meta:{status,msg},data} = respon
+            console.log( respon);
+            if(status===0){ 
+                console.log("aaaa");       
+                location.href = "./login.html"
+            }else{   
+                $('[type="submit"]').prop('disabled',false)
+               return false
+            }
+        },
+        error(res){
+            console.log(res);
+        }
+    })
+    
+       // return false;
+    })
+//发送ajax
+
+
+
+
+
+
+    </script>
+</body>
+</html>

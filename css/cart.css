@@ -1,0 +1,470 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.header {
+  height: 80px;
+  /*   background-color: royalblue; */
+}
+
+.line {
+  display: block;
+  margin-bottom: 30px;
+  height: 1px;
+  width: 100%;
+  border-top: 2px solid #f3168a;
+  background-color: #fff;
+}
+
+.c-logo a img {
+  float: left;
+  padding: 16px 0 12px;
+}
+
+.c-nav {
+  float: right;
+}
+
+.nav-top {
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: normal;
+  letter-spacing: normal;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+.nav-top .head-login span {
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.a {
+  margin-left: 5px;
+  display: inline-block;
+  background: url(../images/car-elf.png);
+  background-position: -372px -253px;
+  width: 26px;
+  height: 26px;
+  vertical-align: top;
+}
+
+.b {
+  margin-left: 15px;
+  color: grey;
+}
+
+.d {
+  margin-left: 15px;
+  color: grey;
+}
+
+.head-login {
+  padding-top: 10px;
+  padding-right: 5px;
+  height: 18px;
+  color: grey;
+}
+
+.head-login span {
+  color: grey;
+  line-height: 26px;
+}
+
+.head-login span a {
+  color: grey;
+}
+
+.itif {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 6px;
+  color: grey;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.nav-bottom {
+  position: absolute;
+  right: -20px;
+}
+
+.nav-bottom ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.nav-bottom ul li {
+  float: right;
+  font-size: 12px;
+}
+
+.nav-bottom ul li:first-child span:first-child {
+  display: inline-block;
+  line-height: 1;
+  margin-right: 12px;
+  vertical-align: top;
+  font-size: 20px;
+  color: #f66a96;
+  vertical-align: top;
+  background-image: url(../images/car-elf.png);
+  background-position: -587px -145px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-bottom ul li:nth-child(2) span:first-child {
+  display: inline-block;
+  line-height: 1;
+  margin-right: 12px;
+  vertical-align: top;
+  font-size: 20px;
+  color: #f66a96;
+  background-image: url(../images/car-elf.png);
+  background-position: -432px -253px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-bottom ul li:last-child span:first-child {
+  display: inline-block;
+  background-image: url(../images/car-elf.png);
+  background-position: -587px -169px;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  margin-right: 12px;
+  vertical-align: top;
+  font-size: 20px;
+  color: #f66a96;
+}
+
+.nav-bottom ul li span:last-child {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 20px;
+  margin-right: 25px;
+  white-space: nowrap;
+}
+
+.body .b-head {
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.body .b-head a {
+  position: relative;
+  bottom: -1px;
+  display: inline-block;
+  font-size: 16px;
+  color: #333;
+  padding: 15px 10px;
+  margin-right: 10px;
+  color: #f10180;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #f10180;
+}
+
+.body .b-head a span {
+  color: #f10180;
+}
+
+.body .b-title {
+  margin-bottom: 30px;
+}
+
+.body .b-title .adress {
+  font-size: 18px;
+  vertical-align: bottom;
+  height: 25px;
+  max-width: 460px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.body .b-title .adress em {
+  font-weight: 600;
+}
+
+.body .b-title p {
+  display: inline-block;
+  padding-left: 16px;
+  font-size: 14px;
+  color: grey;
+}
+
+.b-nav ul {
+  border: 1px solid #e0e0e0;
+  height: 38px;
+  line-height: 38px;
+  background-color: #f9f9f9;
+}
+
+.b-nav ul li {
+  float: left;
+}
+
+.b-nav ul li:first-child {
+  padding-left: 15px;
+  width: 333px;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  height: 38px;
+}
+
+.b-nav ul li:nth-child(2) {
+  width: 274px;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  height: 38px;
+}
+
+.b-nav ul li:nth-child(3) {
+  width: 260px;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  height: 38px;
+}
+
+.b-nav ul li:last-child {
+  width: 115px;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  height: 38px;
+}
+
+.b-h1 {
+  font-family: MicrosoftYaHei;
+  font-size: 16px;
+  color: #f10180;
+  padding: 20px 15px 16px 15px;
+}
+
+table {
+  border: 1px solid #e0e0e0;
+}
+
+table .goods {
+  padding-left: 15px;
+  width: 333px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+table .goods .checkbox {
+  display: inline-block;
+}
+
+table .goods .checkbox label {
+  display: inline-block;
+  background-image: url(../images/car-elf.png);
+  background-position: -479px -253px;
+  width: 19px;
+  height: 16px;
+  margin-right: 10px;
+  padding: 5px 0 2px;
+  cursor: pointer;
+}
+
+table .goods .inst {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+table .goods .inst a {
+  display: inline-block;
+  width: 74px;
+  height: 74px;
+}
+
+table .goods .inst a img {
+  width: 74px;
+  height: 74px;
+}
+
+table .goods .product-info {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 12px;
+}
+
+table .goods .product-info h3 {
+  color: #333;
+}
+
+table .goods .product-info h3 a {
+  color: #000;
+}
+
+table .goods .product-info h3 a:hover {
+  color: #f10180;
+}
+
+table .goods .product-info p {
+  padding-top: 8px;
+}
+
+table .price {
+  width: 274px;
+  text-align: center;
+  color: #f10180;
+}
+
+table .price span {
+  font-size: 12px;
+}
+
+table .account div {
+  width: 260px;
+  text-align: center;
+}
+
+table .account div a {
+  border: 1px  solid  #e3e2e2;
+  width: 22px;
+  height: 22px;
+}
+
+table .account div input {
+  width: 28px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  color: #272525;
+  background-color: #fff;
+  font-family: 'Microsoft Yahei';
+  border: none;
+}
+
+table .del {
+  width: 160px;
+  text-align: center;
+}
+
+.yunfei {
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  border-top: 0;
+}
+
+.yunfei span {
+  border: 1px solid #36c88e;
+  border-radius: 11px;
+  color: #36c88e;
+  padding: 3px 7px;
+  min-width: 0;
+}
+
+.yunfei div {
+  display: inline-block;
+  font-family: MicrosoftYaHei;
+  font-size: 15px;
+  color: #666;
+  padding-left: 5px;
+}
+
+.jiesuan {
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.jiesuan .juan1 {
+  border: 1px solid  #1d94d1;
+}
+
+.jiesuan .juan {
+  float: left;
+}
+
+.jiesuan .juan div:first-child {
+  padding: 15px 0 0 15px;
+  display: inline-block;
+}
+
+.jiesuan .juan div:first-child .aa {
+  margin-right: 3px;
+  margin-left: 3px;
+  color: #f10180;
+  height: 32px;
+}
+
+.jiesuan .juan div:first-child .xiala {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 14px;
+  height: 32px;
+}
+
+.jiesuan .juan div:last-child {
+  display: inline-block;
+}
+
+.jiesuan .juan div:last-child span:first-child {
+  vertical-align: top;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #f10180;
+  height: 32px;
+}
+
+.jiesuan .juan div:last-child a {
+  margin-left: 35px;
+  color: #1d94d1;
+}
+
+.jiesuan .relprice {
+  float: right;
+  padding: 15px 0 0 15px;
+  height: 100px;
+}
+
+.jiesuan .relprice span:first-child span:first-child {
+  color: #f10180;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.jiesuan .relprice .shiji {
+  padding-left: 50px;
+  padding-right: 10px;
+  color: #f10180;
+}
+
+.jiaoqian {
+  text-align: right;
+  /*  box-sizing: border-box; */
+  float: left;
+  padding: 14px 0 14px 0;
+  width: 80%;
+  height: 20px;
+  /*  border: 1px solid #e2e1e1; */
+  background-color: #f3f3f3;
+}
+
+.JI {
+  float: right;
+  top: -1px;
+  right: -1px;
+  width: 20%;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 0;
+  z-index: 1;
+  background-color: #f10180;
+  /*  border: 1px solid #f10180; */
+}

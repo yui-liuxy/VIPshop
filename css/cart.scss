@@ -421,6 +421,7 @@ table{
 }
 
 .jiaoqian{
+<<<<<<< HEAD
     text-align: right;
    /*  box-sizing: border-box; */
     float: left;
@@ -435,11 +436,70 @@ table{
     top: -1px;
     right: -1px;
    width: 20%;
+=======
+    position: absolute;
+    top: 14px;
+    right: 270px;
+    z-index: 4;
+    margin-right: 12px;
+    color: #666;
+    font-size: 14px;
+}
+.JI{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 250px;
+>>>>>>> versin 0.0.4
     height: 48px;
     line-height: 48px;
     text-align: center;
     border-radius: 0;
     z-index: 1;
     background-color: #f10180;
+<<<<<<< HEAD
    /*  border: 1px solid #f10180; */
 }
+=======
+    border: 1px solid #f10180;
+    font-size: 18px;
+    color: #fff;
+}
+.payfor{
+    position: relative;
+    margin: 0 -1px -1px;
+    height: 50px;
+    background-color: #f3f3f3;
+}
+.message{
+   position: relative;
+    margin: 80px 0 80px;
+    display: flex;   
+    justify-content: space-evenly;
+   /*  background-color: #36c88e; */
+   
+    .promises-pic{
+        background-image: url(../images/car-elf.png);
+        background-position: -306px 0;
+      
+        z-index: 1;
+        width: 302px;
+        height: 141px;
+    }
+    .promises-pic2{
+        background-image: url(../images/car-elf.png);
+        background-position: 0 0;
+       
+        z-index: 1;
+        width: 302px;
+        height: 141px;
+    }
+    .promises-pic3{
+        background-image: url(../images/car-elf.png);
+        background-position: 0 -145px;
+        z-index: 1;
+        width: 302px;
+        height: 141px;
+    }
+}
+>>>>>>> versin 0.0.4

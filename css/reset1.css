@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* css reset  */
 /* 清除所有标签的内外边距 */
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption,a{
@@ -43,46 +42,14 @@ img{
     vertical-align: middle;
 }
 /* 万能清除浮动法 */
-=======
-body,ol,ol,ul,h1,h2,h3,h4,h5,h6,p,span,th,dl,td,dd,form,fieldset,legend,input,textarea,select{
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-}
-i,em{
-    font-style: normal;
-}
-a{
-    text-decoration: none;
-}
-input{
-    outline: none;
-}
-li{
-    list-style: none;
-}
-h1,h2,h3,h4,h5,h6,strong{
-    font-weight: normal;
-}
->>>>>>> versin 0.0.4
 .clearfix{
     *zoom: 1;
 }
 .clearfix::after{
-<<<<<<< HEAD
     content: '';
     display: block;
     height: 0;
     clear: both;
     overflow: hidden;
     visibility: hidden;
-=======
-    visibility: hidden;
-    clear: both;
-    display: block;
-    content: "";
-    height: 0;
-    /* 隐藏内容保留占位 */
-    overflow: hidden;
->>>>>>> versin 0.0.4
 }

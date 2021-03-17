@@ -45,11 +45,7 @@ function move(dom,attr,target,callback){
         // 1 获取元素当前位置
         if(attr == "opacity"){
             var current = parseInt(getStyle(dom,attr)*100);
-<<<<<<< HEAD
-            console.log(current);
-=======
           
->>>>>>> versin 0.0.4
         }else{
             var current = parseInt(getStyle(dom,attr));
            

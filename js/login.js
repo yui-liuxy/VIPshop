@@ -39,9 +39,6 @@ loginAccount.onclick=function(){
     containAccount.style.display = "block";
     contain.style.display = "none";
 
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -110,4 +107,3 @@ $('button').click(function(){
 
 
 
->>>>>>> versin 0.0.4

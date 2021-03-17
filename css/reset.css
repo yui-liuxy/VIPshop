@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-/* css reset  */
-/* 清除所有标签的内外边距 */
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption,a{
-    margin: 0;
-    padding: 0;
-}
-
-html{
-    font-size: 14px;
-    height: 100%;
-    width: 100%;
-}
-/* 设置全局默认字号字体 */
-body{
-    font: 14px "微软雅黑",Arial;
-    height: 100%;
-    width: 100%;
-}
-/* 取消默认加粗 */
-h1,h2,h3,h4,h5,h6,b,strong{
-    font-weight: normal;
-    font-size: 100%;
-}
-/* 取消默认倾斜 */
-i,em{
-    font-style: normal;
-}
-/* 取消下划线设置默认超链接字体颜色 */
-a{
-    text-decoration: none;
-    color: #444444;
-}
-/* 取消项目符号 */
-li{
-    list-style: none;
-}
-/* 取消选中后的焦点框 */
-input{
-    outline: none;
-}
-img{
-    vertical-align: middle;
-}
-/* 万能清除浮动法 */
-=======
 body,ol,ol,ul,h1,h2,h3,h4,h5,h6,p,span,th,dl,td,dd,form,fieldset,legend,input,textarea,select{
     margin: 0;
     padding: 0;
@@ -64,19 +18,10 @@ li{
 h1,h2,h3,h4,h5,h6,strong{
     font-weight: normal;
 }
->>>>>>> versin 0.0.4
 .clearfix{
     *zoom: 1;
 }
 .clearfix::after{
-<<<<<<< HEAD
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
-=======
     visibility: hidden;
     clear: both;
     display: block;
@@ -84,5 +29,4 @@ h1,h2,h3,h4,h5,h6,strong{
     height: 0;
     /* 隐藏内容保留占位 */
     overflow: hidden;
->>>>>>> versin 0.0.4
 }

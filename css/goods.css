@@ -2,26 +2,57 @@
   margin-top: 22px;
 }
 
-.FW-wrap .goods-left {
+.FW-wrap .goods-left{
   float: left;
   position: relative;
   overflow: hidden;
   width: 420px;
 }
-
-.FW-wrap .goods-left .goodsImg {
-  position: relative;
-  z-index: -1;
-  cursor: crosshair;
-  text-align: center;
-  width: 420px;
-  height: 420px;
+.FW-wrap .goods-left .goodsList ul li{
+  width: 62px;
+  height: 62px;
+  border: 2px solid #00f;
+}
+.FW-wrap .goods-left .goodsList ul li.active{
+  border: 2px solid #f00;
+}
+.FW-wrap .goods-left .goodsList{
+  margin-bottom: 10px;
+}
+.FW-wrap .goods-left .goodsList ul li a img {
+    width: 100%;
+    height: 100%;
+}
+.FW-wrap .goods-left .goodsImg{
+    position: relative;
+    cursor: crosshair;
+    text-align: center;
+    width: 420px;
+    height: 420px;
+}
+.FW-wrap .goods-left .goodsImg .shade{
+    width: 80px;
+    height: 80px;
+    background: rgba(250, 195, 103, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+.FW-wrap .goods-left .goodsImg>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.FW-wrap .goods-left .goodsImg{
+  overflow: hidden;
 }
 
-.FW-wrap .goods-left .goodsImg img {
-  width: 420px;
-  height: 420px;
-}
 
 .FW-wrap .goods-left .goodsList ul {
   height: 64px;
@@ -32,19 +63,8 @@
 
 .FW-wrap .goods-left .goodsList ul li {
   float: left;
-}
-
-.FW-wrap .goods-left .goodsList ul li a {
-  display: inline-block;
-  width: 62px;
-  height: 62px;
-  padding-left: 10px;
-}
-
-.FW-wrap .goods-left .goodsList ul li a img {
-  width: 62px;
-  height: 62px;
-  padding-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .FW-wrap .goods-left .product-text {
@@ -63,41 +83,40 @@
 }
 
 .FW-wrap .goods-left .product-text div {
-  margin-left: 10px;
-  display: inline-block;
-  color: #999;
-  line-height: 20px;
-  cursor: pointer;
+    margin-left: 10px;
+    display: inline-block;
+    color: #999;
+    line-height: 20px;
+    cursor: pointer;
 }
 
 .FW-wrap .goods-left .product-text span {
-  float: right;
-  display: inline-block;
-  background: #fafafa;
-  border: solid 1px #c2c2c2;
-  border-radius: 2px;
-  cursor: pointer;
-  position: relative;
-  z-index: 100;
+    display: block;
+    background: #fafafa;
+    border: solid 1px #c2c2c2;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    float: right;
 }
 
 .FW-wrap .goods-left .pi-promise-list {
-  padding: 15px 0;
+    padding: 15px 0;
 }
-
 .FW-wrap .goods-right {
-  float: left;
-  width: 550px;
-  position: relative;
-  z-index: 100;
-  min-height: 634px;
-  margin-left: 30px;
+    float: left;
+    width: 550px;
+    position: relative;
+    z-index: 100;
+    min-height: 634px;
+    margin-left: 30px;
 }
 
 .FW-wrap .goods-right .pib-title {
-  color: #4d4d4d;
-  margin-bottom: 10px;
-  clear: both;
+    color: #4d4d4d;
+    margin-bottom: 10px;
+    clear: both;
 }
 
 .FW-wrap .goods-right .pib-title a {
@@ -468,5 +487,5 @@
 .FW-wrap .other-form-box .imgf img {
   position: absolute;
   left: -7px;
-  top: 45px;
+  top: 35px;
 }

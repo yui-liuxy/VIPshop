@@ -8,7 +8,27 @@
   height: 80px;
   /*   background-color: royalblue; */
 }
+.b-table{
+    display: flex;
+    flex-direction:column;
+    border: 1px solid  #eee;
+}
 
+.b-table tr{
+     display: flex;
+     height: 100px;
+     justify-content: space-around;
+}
+.b-table tr td:nth-child(3){
+    width: 100px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+.number input{
+    width: 50px;
+    
+    
+}
 .line {
   display: block;
   margin-bottom: 30px;
@@ -467,4 +487,11 @@ table .del {
   z-index: 1;
   background-color: #f10180;
   /*  border: 1px solid #f10180; */
+}
+
+
+
+.relprice{ 
+   display:flex;
+    
 }

@@ -4,11 +4,7 @@ $userphone = $_POST['userphone'];
 $password = $_POST['password'];
 
 // echo ($userphone);
-<<<<<<< HEAD
-$con = mysqli_connect("127.0.0.1","root","root","weipinghui");
-=======
 $con = mysqli_connect("127.0.0.1","lxy","xhcCDAajemXMndRE","lxy");
->>>>>>> versin 0.0.4
 mysqli_query($con,"set names utf8");
 // 查询用户名是否被占用
 $res = mysqli_query($con,"select * from user where userphone='$userphone'");

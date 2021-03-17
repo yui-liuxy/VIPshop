@@ -342,6 +342,7 @@ body{
     float: left;
 }
 .uli1 .liu2{
+    position: relative;
     width: 135px;
     height: 50px;
     background-color: #F10180;
@@ -375,21 +376,57 @@ body{
     position: relative;
 }
 /* 侧边栏 */
+.li12>li>ul{
+   position:absolute;
+    left:120%;
+    top:0;
+    width:500px;
+    background-color: #0f0;
+    border:1px solid #000;
+    /*display:none;*/
+    
+}
 .li12{
     width: 135px;
-    height: 462px;
+    /*height: 462px;*/
     position: absolute;
     top: 50px;
+    left: 0px;
     float: left;
     background-color: #F10180;
     text-align: left;
-    display: none;
-    z-index: 2;
+    /*display: none;*/
+    z-index: 5;
 }
 .li12 li a{
     color: #f11373;
     font-size: 13px;
 }
+.li12 li{
+    color: #f11373;
+}
+
+
+
+.li12>li>ul> ul{
+    padding-left:30px;
+}
+.li12>li>ul ul:after{
+    clear:both;
+    content:'';
+    display:block;
+}
+.li12>li>ul ul li{
+    float:left;
+    margin:3px 5px;
+}
+
+
+
+
+
+
+
 .ul3{
     width: 135px;
     height: 42px;
@@ -455,11 +492,11 @@ body{
     width: 1150px;
     margin: 0 auto;
     border: 10px solid #fff;
-    height: 380px;
+    height: 450px;
 }
 .banerbox img{
     width: 1150px;
-    height: 390px;
+    height: 420px;
     position: relative;
     cursor: pointer;
 }
@@ -498,8 +535,9 @@ body{
     height: 30px;
     line-height: 30px;
     position: absolute;
-    bottom: 0;
+    bottom: -12px;
     left: 43%;
+    font-size: 14px;
 }
 .ol1 li{
     float: left;
@@ -617,8 +655,12 @@ body{
     right: 14px;
 }
 .box{
+    display: flex;
     height: 330px;
     margin: 0 auto;
+   
+    align-items: center;
+    justify-content: space-between;
 }
 .boxB_img{
     width: 1100px;
@@ -631,17 +673,41 @@ body{
 }
 .box_good{
     width: 1075px;
-    height: 313px;
+    height: 330px;
     position: relative;
     bottom: 330px;
     position: relative;
     margin-top: 10px;
+    display: flex;
+     align-items: center;
+    justify-content: space-between;
 }
 .good_img{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
+.good_img p{
+    display: flex;
+   width: 150px;
+   display:-webkit-box;
+overflow:hidden;
+text-overflow:ellipsis;
+-webkit-line-clamp:2;
+-webkit-box-orient:vertical;
+}
+
+.good_img span{
+    display: block;
+    position: relative;
+    right: 26px;
+    font-size: 14px;
+    top: 1px;
+    background-color: red;
+}
+
+
 .good_img img{
     width: 156px;
     height: 219px;
@@ -722,9 +788,22 @@ body{
 }
 .box_good span{
     position: relative;
-    right: 26px;
-    font-size: 12px;
-    top: -13px;
+    right: 0px;
+    font-size: 14px;
+    top: 0px;
+   display: block;
+    width: 43px;
+    height: 21px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 21px;
+    color: #F5F5F5;
+    background-color: #F03867;
+    float: left;
+    margin: 5px;
+    margin-left: 30px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 .box_good .s2{
     position: relative;

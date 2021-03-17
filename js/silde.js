@@ -1,0 +1,34 @@
+  $(".top-nav>ul>li").on('mouseenter',function(){
+      $(this).css(
+       "background-color","#F10180"
+       )  
+       $(this) 
+  })
+  $(".top-nav>ul>li").on('mouseleave',function(){
+    $(this).css(
+     "background-color","#262626"
+     )   
+})
+$(".top-nav>ul>li:nth-child(2)").on('mouseleave',function(){
+    $(this).css(
+     "background-color","#F10180"
+     )   
+})
+$(".bottom-nav>a>i").on('mouseleave',function(){
+    $(this).css(
+     "background-color","#262626"
+     )   
+})
+$(".bottom-nav>a>i").on('mouseenter',function(){
+    $(this).css(
+     "background-color","#F10180"
+     )   
+})
+
+$(".bottom-nav>a:nth-child(2)").click(function(){
+   console.log($(".bottom-nav>a:nth-child(2)"));
+    $("html,body").animate({
+        scrollTop:0
+    })  
+    return;
+})

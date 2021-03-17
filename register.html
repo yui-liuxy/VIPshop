@@ -6,23 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
     <link rel="stylesheet" href="./font/iconfont.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/register.css">
-=======
     <link rel="stylesheet" href="./css/reset1.css">
     <link rel="stylesheet" href="./css/register.css">
     <link rel="shortcut icon" href="./favicon.ico" />
->>>>>>> versin 0.0.4
 </head>
 <body>
     
     <div class="rej-header container">
-<<<<<<< HEAD
-       <div class="rej-log"><a href="https://www.vip.com/">唯品会</a></div>
-=======
        <div class="rej-log"><a href="http://8.135.35.126/index.html">唯品会</a></div>
->>>>>>> versin 0.0.4
        <div class="rej-hRight"></div>  
     </div>
     <div class="rej-conntent ">
@@ -30,11 +21,7 @@
          <div class="rej-login  ">
           <div  class="'log-top">
            <div class="log-tableNav">
-<<<<<<< HEAD
-               <div class="logTabnavle">会员注册</div><div class="logTabnavri">已注册可直接<a href="">登录</a>   
-=======
                <div class="logTabnavle">会员注册</div><div class="logTabnavri">已注册可直接<a href="./login.html">登录</a>   
->>>>>>> versin 0.0.4
                 </div>
            </div>
            <div class="containAccount-login">
@@ -56,27 +43,6 @@
     <div class="rej-foot">
         <p>Copyright 2008-2020 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
     </div> 
-<<<<<<< HEAD
-    <script  src="./js/jQuery 3.6.0.js"></script>
-   
-    <script>
-       
-         //手机号
-        
-         if($('[name="userphone"]').val()===''){
-                $('.p').text('请先输入手机号以安全验证')       
-            }
-         $('[name="userphone"]')[0].oninput=function(){
-            var  reg = /^1[35789]\d{9}$/;
-            if(!reg.test($('[name="userphone"]').val())){
-                $('.p').text('请输入正确手机号') 
-            }else{
-                $('.p').remove()
-                return true
-            }
-
-        }
-=======
    
     <script  src="./js/jQuery 3.6.0.js"></script>
     <script src="./layer/layer.js"></script>
@@ -110,7 +76,6 @@
             }
 
         })
->>>>>>> versin 0.0.4
       
           //密码框 
         
@@ -121,13 +86,6 @@
             $('.pw').text('请输入密码')
         }
        }
-<<<<<<< HEAD
-       $('[type="password"]')[0].oninput=function(){
-            var word_reg = /[a-zA-Z]+/;
-             var number_reg = /\d+/;
-            // console.log($('[type="password"]')[0].value);
-             if(!word_reg.test($('[type="password"]')[0].value) || !number_reg.test($('[type="password"]')[0].value)){
-=======
        
        
          var word_reg = /[a-zA-Z]+/;
@@ -137,7 +95,6 @@
            pas= word_reg.test($('[type="password"]')[0].value) || !number_reg.test($('[type="password"]')[0].value)
            
              if(!pas){
->>>>>>> versin 0.0.4
                 
                 $( $('[type="password"]')[0].parentNode).next().addClass('pwa')
                 $('.pwa').text('请输入密码6~16位，由字母、数字组成，必须包含字母和数字')
@@ -145,16 +102,6 @@
               }else{
                 $('.pwa').text('')
                   $('.pwa').removeClass('pwa')
-<<<<<<< HEAD
-              }
-       }
-       //确认密码
-       $('[type="password"]')[1].oninput=function(){
-      if($('[type="password"]')[0].value === ''){
-        $( $('[type="password"]')[1].parentNode).next().addClass('pw')
-              $('.pw').text('请先输入密码')
-              }else  if($('[name="password2"]').val() !== $('[name="password1"]').val()){
-=======
                 
               }
        })
@@ -167,7 +114,6 @@
               $('.pw').text('请先输入密码')
               }
               else  if($('[name="password2"]').val() !== $('[name="password1"]').val()){
->>>>>>> versin 0.0.4
         $( $('[type="password"]')[1].parentNode).next().addClass('pw')
                 $('.pw').text('请输入相同密码')
         
@@ -176,14 +122,9 @@
     else{
         $('.pw').text('')
         $('.pw').removeClass('pw')
-<<<<<<< HEAD
-    }
-}
-=======
        
     }
 })
->>>>>>> versin 0.0.4
 
 $p=$(' <span class="pws"> </span>')
     $('.button').click(function(){
@@ -197,11 +138,6 @@ $p=$(' <span class="pws"> </span>')
     }else if( ($(':checkbox').prop('checked'))){
       
         $('.pws').remove()
-<<<<<<< HEAD
-    } 
-   /*  $('[type="submit"]').prop('disabled',true) */
-    $.post({
-=======
         
             console.log(pas);
     console.log(phone);
@@ -209,7 +145,6 @@ $p=$(' <span class="pws"> </span>')
  console.log(pas&&phone&&confirm);
 if(pas&&phone&&confirm){
      $.ajax({
->>>>>>> versin 0.0.4
         url:'./php/register.php',
        
         data:{
@@ -222,20 +157,6 @@ if(pas&&phone&&confirm){
             console.log(respon);
             var {meta:{status,msg},data} = respon
             console.log( respon);
-<<<<<<< HEAD
-            if(status===0){ 
-                console.log("aaaa");       
-                location.href = "./login.html"
-            }else{   
-                $('[type="submit"]').prop('disabled',false)
-               return false
-            }
-        },
-        error(res){
-            console.log(res);
-        }
-    })
-=======
             if(status===0){       
                 location.href = "./login.html"
             }else{   
@@ -265,7 +186,6 @@ if(pas&&phone&&confirm){
     } 
 
    
->>>>>>> versin 0.0.4
     
        // return false;
     })

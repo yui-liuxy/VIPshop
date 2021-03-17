@@ -1,7 +1,3 @@
-
-
-
-
 var statusA = [
     {"list":[{"name":"北京市","id":"101101"},
     {"name":"天津市","id":"101102"},
@@ -194,7 +190,7 @@ for(var j = 0; j < json1.length; j++){
             var li = document.createElement('li');
             var span = document.createElement('span');
             var a = document.createElement('a');
-            a.setAttribute("href","./list.html?cat=3");
+            a.setAttribute("href","./list.html");
             li.className = 'liu1';
             if(index == strArr.length-1){
                 a.className = 'a2'
@@ -213,10 +209,7 @@ for(var j = 0; j < json1.length; j++){
         // console.log(li);
     }
 }
-listul=$("<ul class='li12'></ul>")
-$('.liu2').append(listul)
-
-
+   
 $('.shouping').click(function(){
       
         location.href="./loginout.html"
@@ -229,100 +222,92 @@ $('.shouping').click(function(){
 
 
 
-changelogin();  
+
+ changelogin();  
 
 $.ajax({
     url:"./php/index.php",
     dataType:'json',
-     success:res=>{
-         
-         var {data}=res;
-         var firstCat=data.filter(item=>item.pid==0)
-         console.log(firstCat)
-         handlerData(data,firstCat)
-         var html=render(firstCat)
-        //  document.querySelector('.li12').innerHTML=html;
-     }
- })
-//.then(res=>{
-//     var {data}=res;
-//     var firstCat = data.filter(item=>item.pid==0);
-//     handlerData(data,firstCat)
-//     var html=render(firstCat)
-//     document.querySelector('.liu2>ul').innerHTML=html;
-//     effects()
-//     return $.ajax({
-//         url:"php/goods.php",
-//         data:{pid:1191},
-//         data:'json',
+  
+}).then(res=>{
+    var {data}=res;
+    var firstCat = data.filter(item=>item.pid==0);
+    handlerData(data,firstCat)
+    var html=render(firstCat)
+    document.querySelector('.liu2>ul').innerHTML=html;
+    effects()
+    return $.ajax({
+        url:"php/goods.php",
+        data:{pid:1191},
+        data:'json',
         
-//     }).then(res=>{
-//         var {data}=res;
-//         str="";
-//          data.forEach(item=>{
-//          str += `
-//             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-//                 <div class="thumbnail">
-//                     <img src="${item.img}" width="100%" height="200">
-//                     <div class="caption">
-//                     <h3>${item.name}</h3>
-//                     <p>${item.price}</p>
-//                     <p><a href="detail.html?id=${item.id}" class="btn btn-primary" role="button">立即购买</a></p>
-//                     </div>
-//                 </div>
-//             </div>`
-//     })
+    }).then(res=>{
+        var {data}=res;
+        str="";
+         data.forEach(item=>{
+         str += `
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="${item.img}" width="100%" height="200">
+                    <div class="caption">
+                    <h3>${item.name}</h3>
+                    <p>${item.price}</p>
+                    <p><a href="detail.html?id=${item.id}" class="btn btn-primary" role="button">立即购买</a></p>
+                    </div>
+                </div>
+            </div>`
+    })
     
-// })
-
-// })
+})
 
 
 
 
-// //鼠标移入移初特效
-// function effects(){
-//       var timer1;
-//     $('.liu2').mouseenter(function(){
-//         $('.liu2>ul').stop().slideDown()
-//     })
 
-//     $('.liu2').mouseleave(function(){
-//         $('.liu2>ul').stop().slideUp()
-//     })
 
-//     $('.liu2>ul').mouseenter(function(){
-//         $(this).stop().show()
-//     })
+//鼠标移入移初特效
+function effects(){
+       var timer1;
+    $('.liu2').mouseenter(function(){
+        $('.liu2>ul').stop().slideDown()
+    })
 
-//     $('.liu2>ul').mouseleave(function(){
-//         timer1 = setTimeout(function(){
-//             $(this).stop().slideUp()
-//         },500)
+    $('.liu2').mouseleave(function(){
+        $('.liu2>ul').stop().slideUp()
+    })
+
+    $('.liu2>ul').mouseenter(function(){
+        $(this).stop().show()
+    })
+
+    $('.liu2>ul').mouseleave(function(){
+        timer1 = setTimeout(function(){
+            $(this).stop().slideUp()
+        },500)
         
-//     })
+    })
 
-//     $('.liu2>ul>li').mouseenter(function(){
-//         $(this).children('ul').stop().show().parent().siblings().children('ul').stop().hide()
-//     })
-//     $('.liu2>ul>li ul').mouseenter(function(){
-//         clearInterval(timer1)
-//         $(this).stop().show()
-//     })
-//     $('.liu2>ul>li ul').mouseleave(function(){
-//         $(this).stop().hide()
-//         $('..liu2>ul').stop().slideUp()
-//     })
-// }
-// //递归熏染页面
+    $('.liu2>ul>li').mouseenter(function(){
+        $(this).children('ul').stop().show().parent().siblings().children('ul').stop().hide()
+    })
+    $('.liu2>ul>li ul').mouseenter(function(){
+        clearInterval(timer1)
+        $(this).stop().show()
+    })
+    $('.liu2>ul>li ul').mouseleave(function(){
+        $(this).stop().hide()
+        $('..liu2>ul').stop().slideUp()
+    })
+}
+//递归熏染页面
 function render(firstCat){
     var str="";
     for(var i=0;i<firstCat.length;i++){
         str+='<li><a href="list.html?cat='+firstCat[i].id+'">'+firstCat[i].name+'</a>'
         if(firstCat[i].children){
-            str+="<ul>"
+            str+='<ul>'
             str+=render(firstCat[i].children)
-            str+='</ul>'
+            st+='</ul>'
         }
         str+='</li>'
     }
@@ -347,65 +332,6 @@ function handlerData(data,firstCat){
         }
     }
 }
-$.ajax({
-    url:"php/goods.php",
-        data:{pid:1191},
-        dataType:'json',
-        success:res=>{
-            var {data}=res;
-            // console.log(res)
-            str=""
-            data.forEach(item=>{
-                str+=`
-	    		<div class="good_img">
-                    <a href="goodslist.html?id=${item.id}">
-                        <img src="${item.img}" alt="">
-                    </a>
-                    <p>${item.name}</p>
-                    <span>￥${item.price}</span>
-                    
-                </div>
-                `
-              
-            })
-            // console.log( $('.box'))
-            $('.box ').html(str)
-        }
-       
-    
-    
-})
-
-
-$.ajax({
-    url:"php/goods.php",
-        data:{pid:1236},
-        dataType:'json',
-        success:res=>{
-            var {data}=res;
-            // console.log(res)
-            str=""
-            data.forEach(item=>{
-                str+=`
-	    		<div class="good_img">
-                    <a href="goodslist.html?id=${item.id}">
-                        <img src="${item.img}" alt="">
-                    </a>
-                    <p>${item.name}</p>
-                    <span>￥${item.price}</span>
-                    
-                </div>
-                `
-              
-            })
-            // console.log(  $('.box_good'))
-            $('.box_good').html(str)
-        }
-       
-    
-    
-})
-
 
 
 

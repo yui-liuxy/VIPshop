@@ -546,3 +546,99 @@ for(var i in json.data.category){
     console.log(li)
     ul.appendChild(li)
 }
+
+
+if(tool.getCookie('remuserphone')){
+  console.log (11111)
+$('.shouping').click(function(){
+      
+        location.href="./cart.html"
+    })
+    
+}
+
+
+
+
+
+
+
+
+// 获取到当前要展示的商品所属的分类
+var arr = location.search.match(/cat=(\d+)/)
+if(!arr){
+    // 显示所有分类数据
+    var cat = 'all'
+}else{
+    // 指定分类的数据
+    var cat = arr[1]
+}
+var loadindex = layer.load(0,{
+    shade:['#000',]
+})
+getData(cat)
+
+function getData(cat){
+    $.ajax({
+        data:{cat},
+        url:'./php/list.php',
+        dataType:'json',
+        success:res=>{
+            var {data} = res;
+            console.log(res)
+            if(data.length){
+                // 给数据做分页显示
+                var pageSize = 16;
+                new Page('fenye',{
+                    first:"首页",
+                    previous:"上一页",
+                    next:"下一页",
+                    last:"尾页"
+                },{
+                    total:data.length,
+                    pageSize
+                },function(currentPage){
+                    var arr = data.slice((currentPage-1)*pageSize,currentPage*pageSize)
+                    var str = '';
+                    arr.forEach(item=>{
+                        str += `
+                          <a href="goodslist.html?id=${item.id}">  <div class="list_img_box">
+                         <div class="top_img">
+                       <img src="${item.img}" alt="">
+                       </div>
+            <div class="bottom_txt">
+                <div class="top_txt">
+                    <a href="goodslist.html?id=${item.id}" class="a1">特卖价</a>
+                    <b>￥${item.price}</b>
+                    <div class="sp21">
+                        <span><del>1790</del></span>
+                        <span>2.4折</span>
+                    </div>
+                </div>
+                <span class="s1">券后价¥${item.price}</span>
+                <p class="p1">
+                    ${item.name}
+                </p>
+                <span class="s2">券¥${item.price}</span>
+            </div>
+        </div></a>
+                        `
+                    })
+                    $('.list_img_bottom').html(str)
+                    layer.close(loadindex)
+                })
+                
+            }else{
+                layer.close(loadindex)
+                // 提示当前分类下没有商品区首页重新查看分类
+                $('.list_img_bottom').html(`
+                <div class="jumbotron">
+                    <h1>当前分类下暂无商品!</h1>
+                    <p>请移步首页重新查看分类</p>
+                    <p><a class="btn btn-primary btn-lg" href="index.html" role="button">去首页</a></p>
+                </div>
+                `)
+            }
+        }
+    })
+}

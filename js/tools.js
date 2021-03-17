@@ -40,3 +40,50 @@ var tool = Tool = (function(){
     })()
 })()
 
+
+
+function changelogin(){
+var username=tool.getCookie('remuserphone')
+
+if(username){
+    $('.loginname').remove()
+    reName=$(`<a href="javascript:;" class="reName" >你好${username}</a>`)
+    $('.nav_box >li:eq(0)').prepend(reName);
+    $('.register').remove()
+    reA=$(' <a href="javascript:;" class="reback" >退出登录</a>')
+    $('.nav_box >li:eq(1)').prepend(reA);
+    $('.cart').click(function(){
+        location.href="./cart.html"
+    })
+    
+   $('.shouping').click(function(){
+      
+        location.href="./cart.html"
+    })
+    
+    $('.reback').click(function(){
+        var coindex=layer.confirm('你确定要退出吗',{
+            btn:['仍要离开','我在想想']
+        },function(){
+            tool.removeCookie('remuserphone')
+             $('.reName').remove()
+              $('.reback').remove()
+            loginA=$(` <a href="./login.html" class="loginname">登录</a>`)
+             $('.nav_box >li:eq(0)').prepend(loginA);
+            registerA=$(`<a href="./register.html" class="register">注册</a>`)
+             $('.nav_box >li:eq(1)').prepend(registerA);
+             location.href="./index.html"
+             layer.close(coindex)
+            
+        },function(){
+            layer.msg('感谢留下',{
+                icon:1,
+                time:500
+            })
+        })
+        return false
+    })
+    
+}
+
+}

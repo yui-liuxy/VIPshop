@@ -1,0 +1,230 @@
+.list_details {
+  height: 880px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.list_details .left_dt {
+  display: block;
+  float: left;
+  width: 180px;
+  height: 135px;
+  border: 1px solid #cccc;
+}
+.list_details .left_dt .txt_top {
+  width: 158px;
+  height: 64px;
+  border: 1px solid #cccc;
+  margin: 5px auto;
+}
+.list_details .left_dt .txt_top img{
+    width: 100%;
+    height: 100%;
+}
+.list_details .left_dt .txt_botom {
+  width: 158px;
+  height: 51px;
+  border: 1px solid #cccc;
+  margin: 6px auto;
+}
+.list_details .left_dt .txt_botom img{
+    width: 100%;
+    height: 100%;
+}
+.list_details .txt_alis_img {
+  width: 180px;
+  height: 650px;
+  border: 1px solid #cccc;
+  margin-top: 160px;
+  float: left;
+  position: absolute;
+  left: 0px;
+}
+.list_details .right_box {
+  width: 870px;
+  height: 810px;
+  float: right;
+  position: relative;
+}
+.list_details .right_box .s58 {
+  display: block;
+  position: relative;
+  top: 230px;
+}
+.list_details .right_box .s58 img {
+  width: 550px;
+  height: 300px;
+  position: relative;
+  left: 15%;
+  top: 50px;
+  margin-bottom: 20px;
+}
+.list_details .right_box .img2 {
+  position: absolute;
+  bottom: 0;
+}
+.list_details .right_box .righti_nav {
+  height: 40px;
+  border-bottom: 3px solid #333333;
+  line-height: 40px;
+}
+.list_details .right_box .righti_nav .navAB {
+  border-top: 1px solid #cccc;
+}
+.list_details .right_box .righti_nav ul {
+  height: 40px;
+}
+.list_details .right_box .righti_nav ul li {
+  width: 75px;
+  float: left;
+  border-left: 0.5px solid #cccc;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.list_details .right_box .righti_nav ul li a {
+  font-size: 12px;
+}
+.list_details .right_box .righti_nav ul li:nth-child(1) {
+  border-bottom: 3px solid #E4007F;
+}
+.list_details .right_box .list_divimg {
+  width: 870px;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  top: 20px;
+}
+.list_details .right_box .list_divimg .sj {
+  display: block;
+  width: 15px;
+  height: 15px;
+  float: left;
+  line-height: 8px;
+  font-size: 11px;
+  position: absolute;
+  left: 0px;
+  margin-top: 25px;
+  background: url(../images/jlt.png) no-repeat;
+  background-position: -275px -234px;
+  top: -2px;
+}
+.list_details .right_box .list_divimg .sj1::after {
+  display: block;
+  text-align: left;
+  clear: both;
+  height: 10px;
+  content: "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+  font-size: 8px;
+  position: relative;
+  top: 45px;
+  line-height: 10px;
+  color: #cccccc;
+}
+.list_details .right_box .list_divimg .s3 {
+  font-size: 21px;
+  padding-left: 23px;
+  color: #E4007F;
+  position: relative;
+  bottom: 7px;
+}
+.list_details .right_box .list_divimg .s4 {
+  font-size: 19px;
+  color: #e2e2e2;
+  position: relative;
+  bottom: 5px;
+  left: 3px;
+}
+.list_details .right_box .list_divimg .icon {
+  width: 80px;
+  height: 45px;
+  margin-top: -1px;
+  font-weight: bold;
+  float: right;
+}
+.list_details .right_box .list_divimg .icon .icon-jinggao {
+  color: #007cff;
+  font-size: 21px;
+  line-height: 40px;
+  position: relative;
+  right: 3px;
+  top: 2px;
+}
+.list_details .right_box .list_divimg .icon span {
+  font-size: 13px;
+  line-height: 38px;
+  font-weight: normal;
+}
+.list_details .right_box .table {
+  width: 870px;
+  height: 251px;
+  border: 1px solid #cccc;
+  margin: 90px auto;
+  position: relative;
+}
+.list_details .right_box .table .tab_box {
+  width: 870px;
+  border-top: 1px solid #cccc;
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  line-height: 40px;
+  text-align: center;
+}
+.list_details .right_box .table .tab_box span {
+  cursor: pointer;
+  font-size: 13px;
+}
+.list_details .right_box .table .tab_box1 {
+  width: 870px;
+  height: 40px;
+  position: absolute;
+  bottom: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+.list_details .right_box .table .tab_box1 span:nth-child(1) {
+  color: #E4007F;
+  padding-left: 8px;
+}
+.list_details .right_box .table tr td {
+  width: 145px;
+  height: 40px;
+  border-left: 1px solid #cccc;
+  border-bottom: 1px solid #cccc;
+  text-align: center;
+  line-height: 40px;
+}
+.list_details .right_box .table .tr1 td {
+  background-color: #DBDBDB;
+  font-weight: bold;
+}
+.list_details .right_box .table tr td:nth-child(1) {
+  border-left: 0px;
+}
+.list_details .right_box .table tr td:last-of-type {
+  border-right: 0px;
+}
+.list_details .right_box .table .list_divimg {
+  position: relative;
+  top: 80px;
+}
+.list_details .right_box .table .div1 {
+  position: relative;
+  top: 20px;
+}
+.list_details .right_box .table .div1 table tr td {
+  border-right: 1px solid #cccc;
+}
+.list_details .right_box .table .div1 .right_div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  right: 40px;
+  margin-top: 10px;
+  width: 190px;
+  height: 190px;
+  border: 1px solid #cccc;
+}
+
+/*# sourceMappingURL=good.css.map */

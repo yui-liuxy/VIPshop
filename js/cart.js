@@ -155,7 +155,7 @@ function total(){
         totalnum += $(item).parent().siblings('.number').children('[name="number"]').val() - 0
         totalprice += $(item).parent().siblings('.subtotal').children('span').text() - 0
     })
-    $('.aaa>span:first').text(totalnum)
+    $('.count11').text(`${totalnum}件商品`)
     $('.shiji>span:last').text(totalprice)
 }
 // 计算小计

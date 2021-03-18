@@ -87,3 +87,30 @@ if(username){
 }
 
 }
+
+
+
+
+function cartnumber(){
+var userphone=tool.getCookie('remuserphone')
+var str = localStorage.getItem('cartData')
+
+if(str){
+    var arr=JSON.parse(str)
+    arr=arr.filter(item=>item.username==userphone)
+   console.log(arr)
+   var number=arr.reduce(function(a,b){
+       return a+b.number
+   },0)
+   if(arr===[]){
+       $('.shouping  .s2').html(0)
+         console.log( $('.shouping  .s2'))
+    }else{
+console.log( $('.top-nav>ul>li:nth-child(2)>i:last'))        
+$('.top-nav>ul>li:nth-child(2)>i:last').html(number)
+         console.log(number)
+ 
+         $('.shouping  .s2').html(number)
+    }
+}
+}

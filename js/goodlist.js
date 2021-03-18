@@ -107,7 +107,7 @@ $('.hasFinalPrice').click(function(){
         arr.push(obj)
         localStorage.setItem('cartData',JSON.stringify(arr))
     }
-    
+    cartnumber();
     layer.msg('购物车添加成功，请移步购物车结算',{
         icon:1,
         time:1500

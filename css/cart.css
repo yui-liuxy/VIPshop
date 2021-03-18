@@ -495,3 +495,18 @@ table .del {
    display:flex;
     
 }
+
+.b-table tr {
+    line-height: 100px;
+}
+.b-table tr td:nth-child(2)>img {
+  vertical-align: middle;
+}
+.count11{
+    font-size: 14px;
+    color: red;
+}
+.shiji span:nth-child(2){
+    font-size: 20px;
+    color: red;
+}

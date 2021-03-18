@@ -32,3 +32,9 @@ $(".bottom-nav>a:nth-child(2)").click(function(){
     })  
     return;
 })
+$('.top-nav>ul>li:nth-child(2)').click(function(){
+  changelogin();
+   
+   
+    location.href='./cart.html'
+})

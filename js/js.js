@@ -181,6 +181,11 @@ var json1 = [
         ],
     }
 ]
+
+
+function rand(a,b){
+    parseInt(Math.random() * (a- b + 1) + a)
+}
 //动态插入导航数据
 var ul = document.querySelector('.uli1');
 for(var j = 0; j < json1.length; j++){
@@ -194,7 +199,7 @@ for(var j = 0; j < json1.length; j++){
             var li = document.createElement('li');
             var span = document.createElement('span');
             var a = document.createElement('a');
-            a.setAttribute("href","./list.html?cat=3");
+            a.setAttribute("href",`./list.html?cat=all`);
             li.className = 'liu1';
             if(index == strArr.length-1){
                 a.className = 'a2'
@@ -332,9 +337,15 @@ function render(firstCat){
 
 
 
+ 
 
-
-
+  $('.sub').click(function(){
+       var seValues=$('.inp').val()  
+       console.log(11111)
+       location.href=`./list.html?name=${seValues}`
+      
+  })  
+    
 
 // 将所有数据做成层级的数据 - 带children
 function handlerData(data,firstCat){
@@ -406,6 +417,8 @@ $.ajax({
     
 })
 
+//获取本地存储数据渲染购物车数据
 
+ cartnumber()
 
 
